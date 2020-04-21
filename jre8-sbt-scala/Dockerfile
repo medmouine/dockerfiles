@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:8-jdk-alpine
 
 ENV SCALA_VERSION=2.12.8 \
     SBT_VERSION=1.3.8 \
@@ -26,4 +26,3 @@ RUN \
   ln -s /usr/local/sbt/bin/* /usr/local/bin/ && \
   apk del curl && \
   sbt sbtVersion
-
